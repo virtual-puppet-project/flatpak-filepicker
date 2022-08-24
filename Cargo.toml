@@ -10,4 +10,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 rfd = { version = "0.10.0", default-features = false, features = ["xdg-portal"] }
-gdnative = "0.10.0"
+gdnative = { git = "https://github.com/godot-rust/godot-rust.git" }
