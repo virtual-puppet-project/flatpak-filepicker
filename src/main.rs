@@ -6,5 +6,5 @@ fn main() {
         .pick_file();
 
 
-    println!("/run/host{}", model.unwrap().display());
+    println!("{}", model.unwrap().display());
 }
