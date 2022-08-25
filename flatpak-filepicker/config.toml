@@ -1,0 +1,13 @@
+[extension]
+name="FlatpakFilepicker"
+
+[[resources]]
+name = "FilePicker"
+tags = ["plugin"]
+entrypoint = "filepicker"
+gdnative = true
+
+[[resources]]
+name = "FilePickerNode"
+tags = ["plugin", "file-picker"]
+entrypoint = "filepicker.gd"
