@@ -10,13 +10,12 @@ impl PortalDialog {
         PortalDialog
     }
 
-    #[export]
-    fn execute(&self, _o: &Reference) -> GodotString {
-        let dialog = rfd::FileDialog::new()
-            .add_filter("3D Model file", &["vrm", "glb", "gltf", "txt"])
-            .pick_file();
-
-        GodotString::from_str(format!("{}", dialog.unwrap().display()))
+    #[godot]
+    fn get_file(&self) -> GodotString {
+        match rfd::FileDialog::new().pick_file() {
+            Some(path) => GodotString::from_str(format!("{}", path.display())),
+            None => GodotString::new(),
+        }
     }
 }
 
