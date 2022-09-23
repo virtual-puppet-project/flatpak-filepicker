@@ -13,7 +13,7 @@ path = "src/main.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-gdnative = { git = "https://github.com/godot-rust/godot-rust.git" }
+gdnative = "0.10.1"
 
 [target."cfg(not(unix))".dependencies]
 rfd = "0.10.0"

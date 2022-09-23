@@ -10,7 +10,7 @@ impl PortalDialog {
         PortalDialog
     }
 
-    #[godot]
+    #[method]
     fn get_file(&self) -> GodotString {
         match rfd::FileDialog::new().pick_file() {
             Some(path) => GodotString::from_str(format!("{}", path.display())),
